@@ -466,6 +466,12 @@
       burger.classList.toggle('open');
       mobileMenu.classList.toggle('open');
     });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        burger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e, i) => {
         if (e.isIntersecting) {
