@@ -45,7 +45,7 @@
     >
     <div class="hero__veil"></div>
     <div class="hero__content">
-      <p class="tag">Fundada em 2017 · Minas Gerais</p>
+      <p class="tag">Fundada em 2017 · Sul de Minas Gerais</p>
       <h1 class="hero__title">
         O melhor do<br>campo <em>pra você</em>
       </h1>
@@ -82,7 +82,7 @@
       <p class="tag">Quem somos</p>
       <h2 class="headline">Uma família dedicada à terra</h2>
       <p>
-        A DFrasson Minas nasceu da visão de Júlio Cesar da Costa Pereira — um comerciante com vasta experiência no ramo de frutas que decidiu ir além da comercialização e cultivar as melhores variedades de citros do Brasil.
+        A DFrasson Minas nasceu da visão de Júlio Cesar da Costa Pereira — um comerciante com vasta experiência no ramo de frutas que decidiu ir além da comercialização e cultivar as melhores variedades de citros do Brasil, no coração do Sul de Minas Gerais.
       </p>
       <p style="color:var(--c-muted);">
         Unimos técnicas modernas de cultivo à experiência de quem conhece o mercado por dentro. Do plantio à colheita, cada etapa é conduzida com cuidado e responsabilidade.
@@ -215,6 +215,15 @@
             <a href="mailto:contato.minas@dfrasson.com.br" class="contact-item__value" style="font-size:1.15rem;word-break:break-word;">contato.minas@dfrasson.com.br</a>
           </div>
         </div>
+        <div class="contact-item">
+          <div class="contact-item__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <p class="contact-item__label">Localização</p>
+            <span class="contact-item__value" style="font-size:1.15rem;">Sul de Minas Gerais</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -263,6 +272,12 @@
     burger.addEventListener('click', () => {
       burger.classList.toggle('open');
       mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        burger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
     });
 
     // Reveal on scroll
