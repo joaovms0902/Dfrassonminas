@@ -51,7 +51,7 @@
       <p class="tag">Quem somos</p>
       <h2 class="headline" style="font-size:clamp(2rem,3.5vw,3rem);">Uma história de paixão pela terra</h2>
       <p>
-        A DFrasson Minas nasceu em <strong>31 de janeiro de 2017</strong>, fruto da visão e experiência de <strong>Júlio Cesar da Costa Pereira</strong> — um comerciante com vasta trajetória no ramo de frutas.
+        A DFrasson Minas nasceu em <strong>31 de janeiro de 2017</strong>, no <strong>Sul de Minas Gerais</strong>, fruto da visão e experiência de <strong>Júlio Cesar da Costa Pereira</strong> — um comerciante com vasta trajetória no ramo de frutas.
       </p>
       <p style="color:var(--c-muted);">
         Com anos de conhecimento sobre o mercado e uma paixão genuína pelo campo, Júlio decidiu ir além da comercialização e colocar a mão na terra — literalmente. Fundou a empresa com um propósito claro: produzir frutas de qualidade que chegassem com frescor e sabor à mesa do consumidor final e de sua família.
@@ -206,6 +206,12 @@
     burger.addEventListener('click', () => {
       burger.classList.toggle('open');
       mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        burger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
     });
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e, i) => {
